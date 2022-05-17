@@ -1,0 +1,99 @@
+/*# sourceMappingURL=styles.css.map */
+/** GLOBAL FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
+
+/** ------------------------------ */
+/** --------GLOBAL STYLES--------- */
+/** ------------------------------ */
+:root {
+  /** Font family */
+  --poppins: "Poppins", sans-serif;
+  /** Main site colors */
+  --smokey-black: #0c0e07;
+  --corn-silk: #fefae0;
+  --cyan-process: #5bc0eb;
+  --ghost-white: #FFFAFF;
+  --ghost-white: #fbfbfb;
+  --blue-accent: #00b8ce;
+  /** Grey Scale */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /** Rest of the vars */
+  --textColor: var(--grey-700);
+  --borderRadius: 10px;
+  --letterSpacing: 1rem;
+  --transition: all 0.3s ease-in-out;
+  --max-width: 1440px;
+  --max-height: 700px
+  --margin-left: 100px;
+  --margin-right: 100px;
+  /** Box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/** ------------------------------ */
+/** --------GLOBAL STYLING--------- */
+/** ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/** ------------------------------ */
+/** --------HEADER STYLES--------- */
+/** ------------------------------ */
+
+#header{
+  top: 0;
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+  height: 50px;
+  background: transparent;
+  
+}
+
+/** ------------------------------ */
+/** --------S1 SECTION------------ */
+/** ------------------------------ */
+
+.s1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ghostWhite);
+}
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.waving-hand{
+  width: 3rem;
+  align-content: center;
+}
+
+.globe-img{ 
+  width: 1.5rem;
+  align-content: center;
+}
+
+.home-section p {
+  text-align: center;
+}
