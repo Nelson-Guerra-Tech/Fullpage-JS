@@ -18,37 +18,117 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <!-- FavIcon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="./scss/styles.css" />
   </head>
   <body>
     <div id="fullpage">
       <div class="section s1">
+        <!-- header -->
+        <div class="header">
+          <div class="logo">
+            <img src="./resources/SVG/Asset 1.svg" alt="logo" />
+          </div>
+          <!-- header links -->
+          <div class="links-div">
+            <div class="links">
+              <a href="#">project</a>
+              <a href="#">about</a>
+              <a href="#">contact</a>
+            </div>
+          </div>
+        </div>
+
         <!-- home section -->
-        <div class="home-section" data-aos="zoom-in">
-          <h1>
-            <img
-              class="waving-hand"
-              src="https://emojiguide.org/images/emoji/h/1ikaa3b1iz96mh.png"
-              alt="waving-hand"
-            />
-            Hello, I'm Nelson!
-          </h1>
-          <p>
-            A Software Developer with a degree in Information Technology, based
-            out of Georgia
-            <img
-              class="globe-img"
-              src="https://emojiguide.org/images/emoji/e/1lg8jv523xxie.png"
-              alt="globe-img"
-            />
-            I design & develop cool things for the web using React, JavaScript,
-            Bootstrap, CSS, & HTML5.
-          </p>
+        <div class="home-section">
+          <!-- heading name -->
+          <div data-aos="zoom-in" data-aos-duration="1000">
+            <h1>
+              <img
+                class="waving-hand"
+                src="https://emojiguide.org/images/emoji/h/1ikaa3b1iz96mh.png"
+                alt="waving-hand"
+              />
+              Hello, I'm Nelson!
+            </h1>
+          </div>
+          <!-- description -->
+          <div
+            class="home-section-p"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            <p>
+              A Software Developer with a degree in Information Technology,
+              based out of Georgia
+              <img
+                class="globe-img"
+                src="https://emojiguide.org/images/emoji/e/1lg8jv523xxie.png"
+                alt="globe-img"
+              />
+              I design & develop cool things for the web.
+            </p>
+          </div>
         </div>
         <!-- technologies section -->
-        <div class="technologies"></div>
+        <div class="technologies">
+          <!-- icon svgs -->
+          <div class="svgs-div">
+            <div>
+              <img src="./img/icons8-html-5-96.svg" alt="html" />
+              <p class="icon-name">HTML5</p>
+            </div>
+            <div>
+              <img src="./img/icons8-css3-96.svg" alt="css3" />
+              <p class="icon-name">CSS3</p>
+            </div>
+            <div class="tech-icon">
+              <img src="./img/icons8-bootstrap.svg" alt="bootstrap" />
+              <p class="icon-name">Bootstrap</p>
+            </div>
+            <div>
+              <img src="./img/icons8-javascript.svg" alt="javascript" />
+              <p class="icon-name">JavaScript</p>
+            </div>
+            <div>
+              <img
+                class="rotate"
+                src="./img/icons8-react-native.svg"
+                alt="React"
+              />
+              <p class="icon-name">React</p>
+            </div>
+            <div>
+              <img src="./img/icons8-git.svg" alt="Git" />
+              <p class="icon-name">Git</p>
+            </div>
+          </div>
+        </div>
+        <!-- END of Technologies -->
       </div>
+      <!-- END Section 1 -->
+
       <div class="section s2">Section 2</div>
       <div class="section s3">Section 3</div>
       <div class="section s4">Section 4</div>

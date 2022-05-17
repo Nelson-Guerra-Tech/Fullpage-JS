@@ -55,14 +55,36 @@ body {
 /** --------HEADER STYLES--------- */
 /** ------------------------------ */
 
-#header{
+.header{
   top: 0;
   position: fixed;
   z-index: 9;
   width: 100vw;
   height: 50px;
   background: transparent;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px 0 50px;
+}
+
+.logo img{
+width: 3rem;
+}
+
+.links-div{
+  display: flex;
+}
+
+.links{
+  padding-right: 50px;
+}
+
+.links a{
+  padding-right: 2rem;
+  text-decoration: none;
+  color: var(--smokey-black);
+  letter-spacing: .2rem;
 }
 
 /** ------------------------------ */
@@ -80,8 +102,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   max-width: 50%;
+}
+
+.home-section h1{
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .waving-hand{
@@ -94,6 +121,96 @@ body {
   align-content: center;
 }
 
-.home-section p {
+.home-section-p{
+text-align: center;
+width: 90%;
+}
+
+.home-section-p p{
+font-size: 1.2rem;
+color: var(--grey-500);
+}
+
+.technologies{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgs-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.svgs-div img{
+width: 3.5rem;
+}
+
+.svgs-div .icon-name{
+  font-size: .8rem;
   text-align: center;
+}
+
+.rotate {
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .home-section h1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home-section-p p{
+font-size: .8rem;
+color: var(--grey-500);
+}
+
+.waving-hand{
+  width: 2.5rem;
+}
+
+.globe-img{ 
+  width: 1rem;
+  align-content: center;
+}
+
+.svgs-div img{
+width: 2rem;
+}
+
+.svgs-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.svgs-div .icon-name{
+  display: none;
+}
+
+.logo img{
+width: 1.5rem;
+padding: 0;
+}
+
+.links a{
+display: none;
+}
 }
