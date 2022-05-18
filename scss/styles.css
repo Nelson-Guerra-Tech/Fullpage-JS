@@ -185,17 +185,40 @@ letter-spacing: .1rem;
 }
 
 .scroll-down p{
-  font-size: 1.2rem;
+  font-size: 1rem;
+  writing-mode: vertical-lr;
+/* text-orientation: sideways-right;
+text-orientation: sideways; */
+}
+
+.scroll-down-2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.scroll-down-2 img{
+  height: 2rem;
+}
+
+.scroll-down-2 p{
+  font-size: 1rem;
 writing-mode: vertical-lr;
-text-orientation: sideways-right;
-text-orientation: sideways;
+/* text-orientation: sideways-right;
+text-orientation: sideways; */
 }
 
 .svgs-div{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: .2rem;
 }
 
 .svgs-div img{
@@ -271,7 +294,7 @@ display: none;
 }
 
 /** ------------------------------ */
-/** --------S2 SECTION------------ */
+/** --------S2 & S3 SECTION------- */
 /** ------------------------------ */
 
 .s2{
@@ -279,6 +302,16 @@ display: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.s3{
+  color: var(--ghost-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   padding-top: 2rem;
@@ -302,7 +335,22 @@ display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+}
+
+.card-2{
+  width: 80%;
+  height: 35%;
+  background-color: var(--ghost-white);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  margin: 0;
+  color: var(--smokey-black);
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-reverse;
 }
 
 .project-img{
@@ -320,4 +368,24 @@ top: 0;
 
 .project-description{
   width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-div{
+  padding-top: .5rem;
+}
+
+.btn{
+  background-color: var(--accent);
+  border-radius: var(--borderRadius);
+}
+
+.btn a{
+  color: var(--ghost-white);
+  text-decoration: none;
+}
+
+.btn a:hover{
+  color: var(--smokey-black);
 }
