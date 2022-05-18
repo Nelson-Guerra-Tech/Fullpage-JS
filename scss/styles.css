@@ -11,7 +11,7 @@
   /** Main site colors */
   --smokey-black: #0c0e07;
   --corn-silk: #fefae0;
-  --cyan-process: #5bc0eb;
+  --accent: #0097d7;
   --ghost-white: #FFFAFF;
   --ghost-white: #fbfbfb;
   --blue-accent: #00b8ce;
@@ -49,6 +49,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  max-width: 1440px;
+  transition: var(--transition);
 }
 
 /** ------------------------------ */
@@ -84,7 +86,7 @@ width: 3rem;
   padding-right: 2rem;
   text-decoration: none;
   color: var(--smokey-black);
-  letter-spacing: .2rem;
+  letter-spacing: .1rem;
 }
 
 /** ------------------------------ */
@@ -102,18 +104,42 @@ width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  max-width: 50%;
+flex-wrap: wrap;
+  max-width: 60%;
+}
+
+.home-section span{
+  color: var(--accent);
 }
 
 .home-section h1{
   font-size: 4rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .waving-hand{
   width: 3rem;
   align-content: center;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
 }
 
 .globe-img{ 
@@ -129,6 +155,7 @@ width: 90%;
 .home-section-p p{
 font-size: 1.2rem;
 color: var(--grey-500);
+letter-spacing: .1rem;
 }
 
 .technologies{
@@ -141,15 +168,38 @@ color: var(--grey-500);
   align-items: center;
 }
 
+.scroll-down{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.scroll-down img{
+  height: 2rem;
+}
+
+.scroll-down p{
+  font-size: 1.2rem;
+writing-mode: vertical-lr;
+text-orientation: sideways-right;
+text-orientation: sideways;
+}
+
 .svgs-div{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .svgs-div img{
-width: 3.5rem;
+width: 3rem;
 }
 
 .svgs-div .icon-name{
@@ -170,19 +220,24 @@ width: 3.5rem;
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   .home-section h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
+.home-section-p{
+text-align: center;
+width: 100%;
+}
+
 .home-section-p p{
-font-size: .8rem;
+font-size: .6rem;
 color: var(--grey-500);
 }
 
 .waving-hand{
-  width: 2.5rem;
+  width: 2rem;
 }
 
 .globe-img{ 
@@ -213,4 +268,56 @@ padding: 0;
 .links a{
 display: none;
 }
+}
+
+/** ------------------------------ */
+/** --------S2 SECTION------------ */
+/** ------------------------------ */
+
+.s2{
+  color: var(--ghost-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.s2 h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.card{
+  width: 80%;
+  height: 35%;
+  background-color: var(--ghost-white);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  margin: 0;
+  color: var(--smokey-black);
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-img{
+  width:80%;
+}
+
+.project-img img{
+margin: 0;
+background-size: cover;
+width: 100%;
+bottom: 0;
+left: 0;
+top: 0;
+}
+
+.project-description{
+  width: 100%;
 }
