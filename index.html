@@ -43,7 +43,7 @@
   </head>
   <body>
     <div id="fullpage">
-      <div class="section s1">
+      <div class="section s1" id="">
         <!-- header -->
         <div class="header">
           <div class="logo">
@@ -53,8 +53,8 @@
           <div class="links-div">
             <div class="links">
               <a href="#projects">Projects</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@
       </div>
       <!-- END Section 1 -->
 
-      <div class="section s2" id="projects">
+      <div class="section s2">
         <h1>Projects</h1>
         <!-- Card -->
         <div class="card">
@@ -393,24 +393,135 @@
       </div>
       <!-- About me section -->
       <div class="section s4">
-        <div class="about-me-pic">
-          <img src="./img/DSC04392.jpg.jpg" alt="" />
-        </div>
-        <div class="about-info">
-          <p>
-            Self-motivated Army Veteran with a Bachelor's in Information
-            Technology. People-oriented, adaptable, and specializing in Software
-            Development. Passionate about technology, dedicated to lifelong
-            learning, and experienced working in highly professional,
-            team-oriented environments. Skilled with the Software Development
-            Lifecycle, including design, coding, and debugging of web
-            applications. Knowledgeable in Object Oriented Programming,
-            development techniques, and agile methodologies.
-          </p>
+        <div class="about-container">
+          <div class="about-me-pic">
+            <img src="./img/DSC04392.jpg.jpg" alt="" />
+          </div>
+          <div class="about-info">
+            <h2>Nelson Guerra</h2>
+            <h5>Education: BS of Science in Information Technology</h5>
+            <p>
+              Self-motivated Veteran with a Bachelor in Information Technology.
+              People-oriented, adaptable, and specializing in Software
+              Development. Passionate about technology, dedicated to lifelong
+              learning, and experienced working in highly professional,
+              team-oriented environments.
+            </p>
+            <button class="btn"><a href="#">Résume</a></button>
+          </div>
         </div>
       </div>
       <!-- END About me section -->
-      <div class="section s5">Section 5</div>
+      <div class="section s5">
+        <!--Section: Contact Form-->
+        <section class="mb-4">
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center my-4">
+            Contact Me
+          </h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">
+            Do you have any questions? Do not hesitate to contact me directly. I
+            will get back to you as soon as possible.
+          </p>
+
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+              <form
+                id="contact-form"
+                name="contact-form"
+                action="mail.php"
+                method="POST"
+              >
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                      />
+                      <label for="name" class="">Your name</label>
+                    </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                      />
+                      <label for="email" class="">Your email</label>
+                    </div>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        class="form-control"
+                      />
+                      <label for="subject" class="">Subject</label>
+                    </div>
+                  </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12">
+                    <div class="md-form">
+                      <textarea
+                        type="text"
+                        id="message"
+                        name="message"
+                        rows="2"
+                        class="form-control md-textarea"
+                      ></textarea>
+                      <label for="message">Your message</label>
+                    </div>
+                  </div>
+                </div>
+                <!--Grid row-->
+              </form>
+
+              <div class="text-center text-md-left">
+                <a
+                  class="btn btn-send"
+                  onclick="document.getElementById('contact-form').submit();"
+                  >Send</a
+                >
+              </div>
+              <div class="status"></div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+          </div>
+        </section>
+        <!--Section: Contact Form-->
+
+        <!-- footer -->
+        <div class="footer">
+          <div class="made-with-love"></div>
+        </div>
+      </div>
     </div>
 
     <!-- JavaScript -->
@@ -423,6 +534,35 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- form AJAX -->
+    <script type="text/javascript">
+      document.getElementById("status").innerHTML = "Sending...";
+      formData = {
+        name: $("input[name=name]").val(),
+        email: $("input[name=email]").val(),
+        subject: $("input[name=subject]").val(),
+        message: $("textarea[name=message]").val(),
+      };
+
+      $.ajax({
+        url: "mail.php",
+        type: "POST",
+        data: formData,
+        success: function (data, textStatus, jqXHR) {
+          $("#status").text(data.message);
+          if (data.code)
+            //If mail was sent successfully, reset the form.
+            $("#contact-form")
+              .closest("form")
+              .find("input[type=text], textarea")
+              .val("");
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          $("#status").text(jqXHR);
+        },
+      });
     </script>
 
     <!-- Main JS -->
