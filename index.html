@@ -7,7 +7,11 @@
     <title>Software Developer | Nelson Guerra</title>
 
     <!-- Fullpage CSS -->
-    <link rel="stylesheet" href="./fullPage.js-master/dist/fullpage.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./fullPage.js-master/dist/fullpage.css"
+    />
     <!-- AOS CSS/JS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -43,7 +47,7 @@
   </head>
   <body>
     <div id="fullpage">
-      <div class="section s1" id="">
+      <div class="section s1 active" id="">
         <!-- header -->
         <div class="header">
           <div class="logo">
@@ -559,7 +563,7 @@
       };
 
       $.ajax({
-        url: "mail.php",
+        url: "./php/mail.php",
         type: "POST",
         data: formData,
         success: function (data, textStatus, jqXHR) {

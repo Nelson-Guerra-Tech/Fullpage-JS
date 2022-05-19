@@ -2,24 +2,11 @@
 new fullpage("#fullpage", {
   licenseKey: "B04KK-41DM9-I5XY6-O0O08-RQNOO",
   sectionsColor: ["#fbfbfb", "#0C0E07", "#0C0E07", "#fbfbfb", "#fbfbfb"],
-  autoScrolling: false,
+  autoScrolling: true,
   anchors: ["home", "projects", "projects2", "about", "contact"],
   parallax: false,
   scrollBar: false,
 });
-
-// targetting elements
-const navigation = document.querySelector(".links");
-
-colorChange = () => {
-  const links = navigation;
-  if (window.document.contains("s2")) {
-    links.style.color = "#fbfbfb";
-  }
-  console.log(links);
-};
-
-colorChange();
 
 // Validating Form
 function validateForm() {
