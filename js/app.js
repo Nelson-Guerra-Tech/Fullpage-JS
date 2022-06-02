@@ -3,7 +3,7 @@ new fullpage("#fullpage", {
   licenseKey: "B04KK-41DM9-I5XY6-O0O08-RQNOO",
   sectionsColor: ["#fbfbfb", "#f1f5f8", "#fbfbfb", "#f1f5f8"],
   autoScrolling: true,
-  anchors: ["home", "projects", "projects2", "about", "contact"],
+  anchors: ["home", "projects", "about", "contact"],
   parallax: false,
   scrollBar: false,
 });
