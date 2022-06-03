@@ -87,6 +87,13 @@ width: 3rem;
   text-decoration: none;
   color: var(--smokey-black);
   letter-spacing: .1rem;
+  transition: all .3s ease-in-out;
+}
+
+.links a:hover{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--smokey-black);
 }
 
 /** ------------------------------ */
@@ -219,12 +226,17 @@ text-orientation: sideways; */
   justify-content: flex-start;
   align-items: center;
   gap: .2rem;
-padding-bottom: 5rem;
+padding-bottom:0rem;
 
 }
 
 .svgs-div img{
 width: 3rem;
+transition: all .3s ease-in-out;
+}
+
+.svgs-div img:hover{
+width: 4rem;
 }
 
 .svgs-div .icon-name{
@@ -358,6 +370,17 @@ transition: all .3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.img-div{
+  width: 20rem;
+  height: 27rem;
+  overflow: hidden;
+}
+
+.card .project-img{
+height: 100%;
+width: 100%;
+}
+
 .project-info{
 display: flex;
 flex-direction: column;
@@ -381,7 +404,7 @@ padding: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: .5rem;
+  gap: .1rem;
 }
 
 .tech-icons-container img{
@@ -390,17 +413,11 @@ padding: 1rem;
 
 .project-info a{
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   bottom: 1.5rem;
-  color: var(--accent);
   text-decoration: none;
   cursor: pointer;
   transition: all .3s ease-in-out;
-}
-
-.project-info a:hover{
-  font-size: 1.2rem;
-  color: var(--smokey-black);
 }
 
 
@@ -428,6 +445,21 @@ padding: 1rem;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.s4 h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    position: absolute;
+    top: 5%;
+    padding-top: 0px;
+}
+
+.line{
+  border: 2px solid var(--accent);
+  width: 8rem;
+  top: 12%;
+  position: absolute;
 }
 
 .about-container{
@@ -519,8 +551,16 @@ padding: 1rem;
     gap: 0rem;
   }
 
+  .s4 h1{
+    font-size: 2rem;
+  }
+
   .header .logo img{
     width: 2rem;
+  }
+
+  .line{
+    display: none;
   }
 
   .about-container{
@@ -583,6 +623,7 @@ padding: 1rem;
 
 .s5 p{
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .footer{
@@ -634,6 +675,14 @@ width: 1rem;
   font-size: 1rem;
 }
 
+.s5 h1{
+  font-size: 2rem;
+}
+
+.s5 p{
+  font-size: 1rem;
+}
+
 .footer{
   height: 6rem;
 }
@@ -642,9 +691,12 @@ width: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .6rem;
   padding: 0rem 2rem 0rem 2rem;
 
+}
+
+.made-with-love p{
+  font-size: .6rem;
 }
 
 .made-with-love img{

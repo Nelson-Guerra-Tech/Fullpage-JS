@@ -12,17 +12,18 @@ new fullpage("#fullpage", {
 const card = [
   {
     id: 1,
-    title: "Project Title",
-    img: "./img/project-img.jpg",
-    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+    title: "Wikipedia API",
+    img: "./img/wikipedia-img.png",
+    desc: `Application that uses Wikipedia API to display searches. This project showcases how to use JavaScript with an API.`,
     tech_icon: {
       html: "./img/icons8-html-5-96.svg",
       css: "./img/icons8-css3-96.svg",
       javascript: "./img/icons8-javascript.svg",
       bootstrap: "./img/icons8-bootstrap.svg",
       react: "./img/icons8-react-native.svg",
+      git: "./img/icons8-git.svg",
     },
-    href: "#",
+    href: "https://nelson-guerra-tech.github.io/Wiki-Search/",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const card = [
       javascript: "./img/icons8-javascript.svg",
       bootstrap: "./img/icons8-bootstrap.svg",
       react: "./img/icons8-react-native.svg",
+      git: "./img/icons8-git.svg",
     },
     href: "#",
   },
@@ -49,6 +51,7 @@ const card = [
       javascript: "./img/icons8-javascript.svg",
       bootstrap: "./img/icons8-bootstrap.svg",
       react: "./img/icons8-react-native.svg",
+      git: "./img/icons8-git.svg",
     },
     href: "#",
   },
@@ -63,6 +66,7 @@ const card = [
       javascript: "./img/icons8-javascript.svg",
       bootstrap: "./img/icons8-bootstrap.svg",
       react: "./img/icons8-react-native.svg",
+      git: "./img/icons8-git.svg",
     },
     href: "#",
   },
@@ -81,17 +85,22 @@ function displayCards(cards) {
     // console.log(item);
 
     return `<article class="card">
-            <img class="project-img" src="${item.img}" alt="project-img"/>
+            <div class="img-div">
+            <img class="project-img" src="${item.img}" alt="project-img">
+            </div>
             <div class="project-info">
               <h3>${item.title}</h3>
               <p>${item.desc}</p>
               <div class="tech-icons-container">
-                <img class="tech-icon" src="${item.tech_icon.html}" alt"technologies"/>
-                <img class="tech-icon" src="${item.tech_icon.css}" alt"technologies"/>
-                <img class="tech-icon" src="${item.tech_icon.javascript}" alt"technologies"/>
-                <img class="tech-icon rotate" src="${item.tech_icon.react}" alt"technologies"/>
+                <img class="tech-icon" src="${item.tech_icon.html}" alt"html5"/>
+                <img class="tech-icon" src="${item.tech_icon.css}" alt"css3"/>
+                <img class="tech-icon" src="${item.tech_icon.javascript}" alt"javascript"/>
+                <img class="tech-icon rotate" src="${item.tech_icon.react}" alt"react"/>
+                <img class="tech-icon" src="${item.tech_icon.git}" alt"git"/>
               </div>
-                <a href="${item.href}">Live Demo</a>
+                  <a class="resume-btn" href="${item.href}" target="_blank">
+                    <button class="btn">Live Demo</button>
+                  </a>
             </div>
           </article>`;
   });
