@@ -14,7 +14,7 @@ const card = [
     id: 1,
     title: "Wikipedia API",
     img: "./img/wikipedia-img.png",
-    desc: `Application that uses Wikipedia API to display searches. This project showcases how to use JavaScript with an API.`,
+    desc: `Application that uses Wikipedia API to display results from a database by way of JavasScript to fetch the data using JSON.`,
     tech_icon: {
       html: "./img/icons8-html-5-96.svg",
       css: "./img/icons8-css3-96.svg",
